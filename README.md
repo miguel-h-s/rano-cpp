@@ -79,7 +79,7 @@ Para rodar o Axe no seu terminal Linux:
    ```
    ou execute com o nome do arquivo em que quer escrever/abrir:
    ```bash
-   ./axe nomedoarquivo.txt
+   ./axe CAMINHO/DO/SEU/ARQUIVO.txt
    ```
 
 Desenvolvido com amor e C++ por [Miguel](https://github.com/miguel-h-s)
