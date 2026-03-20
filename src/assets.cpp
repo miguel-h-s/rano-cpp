@@ -1,8 +1,9 @@
 #include "assets.hpp"
 
 #include "assets.hpp"
+#include "axe.hpp"
 
-const std::string AXE_LOGO = R"(
+const std::string AXE_LOGO = DIAMANTE + R"(
   ,  /\  .  
  //`-||-'\\
 (| -=||=- |)
@@ -11,4 +12,4 @@ const std::string AXE_LOGO = R"(
      ||     
      ||     
      () 
-)";
+)" + RESET;

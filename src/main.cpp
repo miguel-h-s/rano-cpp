@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 #include "axe.hpp"
 #include "assets.hpp"
 
@@ -22,7 +23,12 @@ int main(int argc, char* argv[]) {
         apresentacao();
         menu();
         std::cout << "opção: " << std::flush;
-        if (!(std::cin >> opcao)) break; // Evita loop infinito se digitar letra
+        if (!(std::cin >> opcao)) {
+            std::cin.clear(); // Limpa erro se digitar letra
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+        std::cin.ignore();
 
         if (opcao == 0) break;
         

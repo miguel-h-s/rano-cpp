@@ -11,6 +11,8 @@ const std::string VERMELHO  = "\033[31m";
 const std::string VERDE     = "\033[32m";
 const std::string CINZA = "\033[38;5;237m";
 const std::string DOURADO = "\033[1;33m";
+const std::string NEGRITO = "\033[1m";
+const std::string DIAMANTE = "\033[1;36m";
 
 // Protótipos das funções
 // Note que o "= """ (valor padrão) só fica aqui no .h
