@@ -6,7 +6,6 @@
 
 namespace Msg {
     // --- CABEÇALHOS E INTERFACE ---
-    const std::string versao = DOURADO + "Axe Editor v1.4.0 | The Engine Refactor" + RESET;
     const std::string menu_opcoes = "1 - criar e escrever em um arquivo\n" + VERMELHO + "0 - sair" + RESET;
     
     // --- ENGINE E CARREGAMENTO ---
@@ -46,6 +45,21 @@ namespace Msg {
     const std::string descartado = AMARELO + "[AVISO] Alterações descartadas!" + RESET;
     const std::string intacto = CINZA + "[Axe] Nenhuma alteração detectada." + RESET;
     
+
+    // Erros de Validação
+    const std::string erro_nome_vazio = VERMELHO + "[!] Nome de arquivo invalido!" + RESET;
+    const std::string erro_input_menu = VERMELHO + "\n[!] Use apenas numeros no menu!" + RESET;
+    const std::string erro_path = VERMELHO + "[Erro] Nao foi possivel resolver o caminho." + RESET;
+
+    // Feedbacks de Ação
+    const std::string criando_diretorios = AMARELO + "[Axe] Criando diretorios inexistentes..." + RESET;
+    const std::string nome_alterado = VERDE + "[Axe] Nome do arquivo alterado para: " + RESET;
+    const std::string voltando_menu = CINZA + "[Axe] Retornando ao menu principal..." + RESET;
+
+    // Status de Sistema
+    const std::string prompt_opcao = "opção: ";
+    const std::string prompt_filename = AMARELO + "File name: " + RESET;
+
     // Funções dinâmicas
     inline std::string salvo_em(std::string nome) {
         return VERDE + "[OK] Alterações salvas em: " + nome + RESET;

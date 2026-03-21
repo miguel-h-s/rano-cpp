@@ -18,6 +18,7 @@ const std::string DIAMANTE = "\033[1;36m";
 // Note que o "= """ (valor padrão) só fica aqui no .h
 void menu();
 void apresentacao();
+void imprimir_logo_gradiente();
 void criar_escrever(const std::string& nome_fornecido = "");
 
 

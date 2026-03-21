@@ -105,8 +105,14 @@ void processar_edicao(std::vector<std::string>& buffer, std::string& nome_arquiv
 
         // Comando :w (Mudar nome do arquivo - O que você sentiu falta!)
         if (linha.substr(0, 3) == ":w ") {
-            nome_arquivo = linha.substr(3);
-            std::cout << VERDE << "[Axe] Nome do arquivo alterado para: " << nome_arquivo << RESET << "\n";
+            std::string novo_nome = linha.substr(3);
+            if (novo_nome.empty() || novo_nome.find_first_not_of(' ') == std::string::npos) {
+                std::cout << Msg::erro_nome_vazio << "\n";
+            } else {
+                nome_arquivo = novo_nome;
+                std::cout << Msg::nome_alterado << nome_arquivo << "\n";
+            }
+            
             continue;
         }
 
@@ -146,7 +152,7 @@ void salvar_final(std::vector<std::string>& buffer, std::string& nome_arquivo, b
     // garante que o caminho exista
     fs::path p(nome_arquivo);
     if (p.has_parent_path() && !fs::exists(p.parent_path())) {
-        std::cout << AMARELO << "[Axe] Criando diretórios inexistentes..." << RESET << "\n";
+        std::cout << Msg::criando_diretorios << "\n";
         fs::create_directories(p.parent_path());
     }
 
