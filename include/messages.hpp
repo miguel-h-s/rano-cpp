@@ -26,7 +26,8 @@ namespace Msg {
                                 ":d <linha> (deletar linha)\n" +
                                 ":s (salvar e sair)\n" +
                                 ":q! (sair sem salvar)\n" 
-                                ":path (vê o caminho em que você esta tentando salvar/escrever)\n" + RESET;
+                                ":path (vê o caminho em que você esta tentando salvar/escrever)\n"
+                                ":! (abre um shell temporario)" + RESET;
 
     
     const std::string aviso_help = "digite ':help' para a lista de comandos";

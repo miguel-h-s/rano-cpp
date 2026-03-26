@@ -1,3 +1,5 @@
+#include <cstdlib>
+
 #include "engine.hpp"
 #include "assets.hpp"
 #include "messages.hpp"
@@ -68,6 +70,20 @@ void processar_edicao(std::vector<std::string>& buffer, std::string& nome_arquiv
             }
             continue; // Essencial para não tratar o comando como texto!
         } 
+
+        if (linha == ":!") {
+            // Limpa a tela ou avisa que está saindo temporariamente
+            std::cout << "\033[1;33m\n[ Axe: Abrindo Shell Temporário ]\033[0m" << std::endl;
+            std::cout << "Dica: Digite 'exit' para retornar ao Axe.\n" << std::endl;
+
+        
+            // O Axe fica "congelado" aqui até você sair do bash
+            system("bash"); 
+
+            // Quando você digita 'exit' no terminal, o código volta para cá
+            std::cout << "\033[1;32m\n[ Bem-vindo de volta ao Axe! ]\033[0m" << std::endl;
+            std::cout << "Pressione Enter para continuar..." << std::endl;
+        }
 
         // --- COMANDOS TIPO 2: COM ARGUMENTOS (:e, :d, :w) ---
         
