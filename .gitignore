@@ -1,0 +1,9 @@
+# Pasta de objetos e binários
+obj/
+*.o
+axe
+build/
+
+# Arquivos de teste e temporários
+teste.txt
+*~
