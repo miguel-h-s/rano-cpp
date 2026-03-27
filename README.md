@@ -44,15 +44,6 @@ nota: a lista de comandos no README:md não pode estar atualizada como o comando
 - **Sistema:** Linux (testado em Debian/Arch)
 - **Ferramentas:** `make` para automação do build
 
-## Estrutura do Projeto
-O Axe segue uma organização modular para facilitar a manutenção:
-- `/src`: Lógica principal (`main.cpp`, `funcoes.cpp`, `assets.cpp`).
-- `/include`: Headers e definições globais (`axe.hpp`).
-- `/obj`: Objetos de compilação (gerados via Makefile).
-
-## You don't speak Portuguese?
-Make sure to edit the [messages.hpp](include/messages.hpp) file for error commands in your language!
-
 ## screenshots da ultima versão(1.4.1) com a nova engine
 <img width="1366" height="768" alt="Captura de tela_2026-03-20_15-13-18" src="https://github.com/user-attachments/assets/bb212ccb-3dd8-4d1b-9fda-c99c4c3e5d37" />
 
